@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { getDeliveries, addDelivery, deleteDelivery } from "./mockApi";
 import DeliveryCard from "./components/DeliveryCard";
+import AddDeliveryForm from "./components/AddDeliveryForm";
+import styles from "./App.module.css";
 
 function App() {
   const [deliveries, setDeliveries] = useState([]);
@@ -45,9 +47,10 @@ function App() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px' }}>
-      <h1>Logistics Tracker</h1>
-      <p>Total deliveries: {deliveries.length}</p>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Logistics Tracker</h1>
+      <AddDeliveryForm onAdd={handleAdd} />
+      <p className={styles.totalCount}>Total deliveries: {deliveries.length}</p>
       {deliveries.map((delivery) => (
         <DeliveryCard
           key={delivery.id}
