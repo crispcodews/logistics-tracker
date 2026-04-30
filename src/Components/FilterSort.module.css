@@ -3,8 +3,9 @@
   gap: 24px;
   margin-bottom: 24px;
   padding: 16px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
   flex-wrap: wrap;
 }
 
@@ -17,16 +18,17 @@
 .label {
   font-size: 13px;
   font-weight: 600;
-  color: #444;
+  color: #aaa;
 }
 
 .select {
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
-  background-color: white;
+  background-color: #2a2a2a;
+  color: #ffffff;
   min-width: 180px;
 }
 
