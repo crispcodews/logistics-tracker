@@ -26,7 +26,7 @@ function DeliveryCard({ delivery, onDelete }) {
         <p>
           <strong>Carrier:</strong> {delivery.carrier}
         </p>
-        <p>
+        <p className={styles.fullWidth}>
           <strong>Address:</strong> {delivery.address}
         </p>
         <p>
@@ -37,8 +37,8 @@ function DeliveryCard({ delivery, onDelete }) {
           <span
             className={`${styles.statusBadge} ${getStatusClass(
               delivery.status
-            )}`}
-          >
+            )}`}>
+
             {delivery.status}
           </span>
         </p>

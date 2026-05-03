@@ -23,12 +23,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+    align-items: start;
 }
 
 .info p {
     margin: 0;
     font-size: 14px;
     color: #aaa;
+    text-align: left;
+    word-break: break-word;
 }
 
 .info p strong {
@@ -44,8 +47,8 @@
 }
 
 .statusPending {
-    background-color: #3a3000;
-    color: #f0c040;
+    background-color: #7a6000;
+    color: #ffe680;
 }
 
 .statusInTransit {
@@ -71,4 +74,8 @@
 .deleteButton:hover {
     background-color: #ff5555;
     color: white;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
 }
