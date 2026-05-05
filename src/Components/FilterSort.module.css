@@ -36,3 +36,14 @@
   outline: none;
   border-color: #4a90e2;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .select {
+    width: 100%;
+  }
+}

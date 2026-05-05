@@ -3,10 +3,12 @@ import styles from "./FilterSort.module.css";
 function FilterSort({ onFilterChange, onSortChange }) {
   return (
     <div className={styles.container}>
+      {/* Filter by delivery status */}
       <div className={styles.group}>
         <label className={styles.label}>Filter by Status</label>
         <select
           className={styles.select}
+          //Sends selected status value up to App.jsx
           onChange={(e) => onFilterChange(e.target.value)}
         >
           <option value="All">All</option>
@@ -16,10 +18,12 @@ function FilterSort({ onFilterChange, onSortChange }) {
         </select>
       </div>
 
+      {/* Sort deliveries by date or recipient name */}
       <div className={styles.group}>
         <label className={styles.label}>Sort by</label>
         <select
           className={styles.select}
+          // Sends selected sort option up to App.jsx
           onChange={(e) => onSortChange(e.target.value)}
         >
           <option value="default">Default</option>

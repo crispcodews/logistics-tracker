@@ -53,3 +53,19 @@
 .emptyStateSpan {
   font-size: 13px;
 }
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+
+  .rightPanel {
+    width: 100%;
+  }
+}
