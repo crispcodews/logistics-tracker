@@ -8,7 +8,7 @@ CRUD functionality and a clean dark UI.
 
 ## 🚀 Live Demo
 
-[View on Vercel](#) ← replace this with your Vercel URL after deploying
+[View on Vercel](https://logistics-tracker-tau.vercel.app)
 
 ---
 
