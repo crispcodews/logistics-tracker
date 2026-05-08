@@ -24,10 +24,24 @@
   box-sizing: border-box;
   background-color: #2a2a2a;
   color: #ffffff;
+  height: 42px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .input::placeholder {
     color: #888;
+}
+
+.input[type="date"] {
+  color: #ffffff;
+  min-height: 42px;
+  line-height: normal;
+}
+
+.input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  color: #ffffff;
 }
 
 .input:focus {
@@ -44,6 +58,7 @@
   font-size: 15px;
   cursor: pointer;
   font-weight: 600;
+  height: 42px;
 }
 
 .submitButton:hover {
