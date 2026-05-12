@@ -18,24 +18,24 @@ function App() {
   // State for currently selected sort option
   const [sortBy, setSortBy] = useState("default");
 
-  // Fetches all deliveries from the mock API and updates state
-  const fetchDeliveries = async () => {
+  
+
+  // Runs once when the component first mounts - loads initial delivery data
+ useEffect(() => {
+  const loadDeliveries = async () => {
     try {
       setLoading(true);
       const data = await getDeliveries();
       setDeliveries(data);
-    } catch (err) {
+    } catch {
       setError("Failed to load deliveries");
     } finally {
-      // Always runs - turns off loading spinner whether success or failure
       setLoading(false);
     }
   };
 
-  // Runs once when the component first mounts - loads initial delivery data
-  useEffect(() => {
-    fetchDeliveries();
-  }, []);
+  loadDeliveries();
+}, []);
 
   // Handles adding a new delivery - calls API then updates local state
   const handleAdd = async (newDelivery) => {
@@ -43,7 +43,7 @@ function App() {
       const added = await addDelivery(newDelivery);
       // Spread existing deliveries and append new one
       setDeliveries([...deliveries, added]);
-    } catch (err) {
+    } catch  {
       setError("Failed to add delivery");
     }
   };
@@ -54,7 +54,7 @@ function App() {
       await deleteDelivery(id);
       // Keep all deliveries except the one that was deleted
       setDeliveries(deliveries.filter((d) => d.id !== id));
-    } catch (err) {
+    } catch  {
       setError("Failed to delete delivery");
     }
   };
